@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+%html
+  .side-bar
+    .side-bar__up
+      .side-bar__up__user
+        .side-bar__up__user__name masa
+        .side-bar__up__user__icon
+          = link_to "#", class: "side-bar__link-a" do
+            = icon("far fa-edit", class: "side-bar__btn-a")
+          = link_to "#", class: "side-bar__link-b" do
+            = icon('fa fa-cog', class: "side-bar__btn")
+    .side-bar__groups
+      .side-bar__group
+        %p.side-bar__name  ユーザー名
+        %p.side-bar__comment  コメント

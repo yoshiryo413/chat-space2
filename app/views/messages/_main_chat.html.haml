@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+%html
+  .main-chat
+    .main-chat__up
+      .main-chat__left
+        %h2.main-chat__group--name yoshida
+        %ul.main-chat__member 
+          member :
+          %li.main-chat__member--name 
+            ヨシダ
+      %a{ :href => '#', :class => 'main-chat__link--b' }
+        .main-chat__right edit
+    .main-chat__middle
+      .main-chat__middle__talk
+        .main-chat__info
+          %p.main-chat__info__talker 
+            yoshi
+          %p.main-chat__info__date 2020/04/13/(金)
+        %p.main-chat__info--message aaaaaa
+    .main-chat__buttom 
+      .main-chat__form name
+      %label{class: "main-chat__form--label"} 
+        = icon('far fa-image', class: "main-chat__form--btn")
+        %input{type: "file"}
+      .main-chat__button Send
+     
