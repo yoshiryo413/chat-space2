@@ -1,5 +1,5 @@
 .main-chat {
-  background-color:#ffffff;
+  background-color:$main_color;
   width: calc(100vw - 300px);
   float: left;
   &__up {
@@ -77,7 +77,7 @@
     height: 50px;
     width: 100%;
     padding: 0 40px 0 10px;
-    background-color: #ffffff;
+    background-color: $main_color;
     line-height: 50px;
   }
   &__button {
