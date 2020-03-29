@@ -1,12 +1,13 @@
 .side-bar
   .side-bar__up
     .side-bar__up__user
-      .side-bar__up__user__name masa
-      .side-bar__up__user__icon
+      .side-bar__up__user__name 
+        = current_user.name
+      .side-bar__up__usericon
         = link_to "#", class: "side-bar__link-a" do
-          = icon("far fa-edit", class: "side-bar__btn-a")
-        = link_to "#", class: "side-bar__link-b" do
-          = icon('fa fa-cog', class: "side-bar__btn")
+          = icon("far fa-edit", class: "side-bar__link-a")
+        = link_to edit_user_path(current_user), class: "side-bar__link-b" do
+          = icon('fa fa-cog', class: "side-bar__link-b")
   .side-bar__groups
     .side-bar__group
       %p.side-bar__name  ユーザー名

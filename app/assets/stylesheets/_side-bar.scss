@@ -1,5 +1,5 @@
 .side-bar {
-  background-color: $sub_color;
+  background-color:$sub_color;
   width: 300px;
   height: 100vh;
   float: left;
@@ -30,7 +30,7 @@
         color: $main_color;
         padding-right: 5px;
       }
-      .side-bar__link-b {
+      .side-bar__link-b{
         color: $main_color;
         text-decoration: none;
       }
