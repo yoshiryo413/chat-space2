@@ -4,11 +4,15 @@
       .side-bar__up__user__name 
         = current_user.name
       .side-bar__up__usericon
-        = link_to "#", class: "side-bar__link-a" do
+        = link_to new_group_path, class: "side-bar__link-a" do
           = icon("far fa-edit", class: "side-bar__link-a")
         = link_to edit_user_path(current_user), class: "side-bar__link-b" do
           = icon('fa fa-cog', class: "side-bar__link-b")
   .side-bar__groups
-    .side-bar__group
-      %p.side-bar__name  ユーザー名
-      %p.side-bar__comment  コメント
+    - current_user.groups.each do |group|
+      .side-bar__group
+        = link_to '#' , class: "side-bar__group__link" do
+          .side-bar__name  
+            = group.name
+          .side-bar__comment
+            メッセージはありません。
