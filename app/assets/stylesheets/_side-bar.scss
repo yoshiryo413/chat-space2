@@ -46,6 +46,10 @@
     .side-bar__group {
       margin-bottom: 40px;
     }
+    .side-bar__group__link {
+      text-decoration: none;
+      color: $main_color;
+    }
     .side-bar__name {
       font-size: 15px;
       margin-bottom: 5px;
