@@ -1,24 +1,29 @@
 .main-chat
   .main-chat__up
     .main-chat__left
-      %h2.main-chat__group--name yoshida
+      .main-chat__group--name 
+      = @group.name
       %ul.main-chat__member 
-        member :
         %li.main-chat__member--name 
-          ヨシダ
-    = link_to '#',class: "main-chat__btn" do
+        - @group.users.each do |user|
+          = user.name
+    = link_to edit_group_path(@group) , class: "main-chat__btn" do
       .main-chat__right edit 
   .main-chat__middle
+    .messages
+      = render @messages
     .main-chat__middle__talk
       .main-chat__info
         %p.main-chat__info__talker 
-          yoshi
-        %p.main-chat__info__date 2020/04/13/(金)
-      %p.main-chat__info--message aaaaaa
+        %p.main-chat__info__date 
+      %p.main-chat__info--message 
   .main-chat__buttom 
-    .main-chat__form name
-    %label{class: "main-chat__form--label"} 
-      = icon('far fa-image', class: "main-chat__form--btn")
-      %input{type: "file"}
-    .main-chat__button Send
-    
+    .main-chat__form 
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'main-chat__form--message', placeholder: 'type a message'
+        .main-chat__mask
+          = f.label :image, class: "main-chat__form--label" do
+            = icon('far fa-image', class: "main-chat__form--btn")
+            .main-chat__field
+            = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: "main-chat__button"
